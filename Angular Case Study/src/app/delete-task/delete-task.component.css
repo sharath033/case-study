@@ -1,0 +1,12 @@
+.login-wrapper{
+    margin : 3rem auto;
+    width: 20rem;
+}
+input{
+    margin-bottom: 2rem;
+}
+
+form {
+    background-image: url("src\assets\image3.jpg");
+    background-color: teal;
+}

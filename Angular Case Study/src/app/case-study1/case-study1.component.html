@@ -1,0 +1,60 @@
+<hr>
+<h1><b>Task Form</b></h1>
+<form [formGroup]  = "form" (ngSubmit) = "onSubmit(form.value)">
+    <b>Task ID</b> <br>
+    <input type="number" name="TaskId" placeholder="Enter Task Id" formControlName="TaskId">
+    <br>
+
+    <b>Owner ID</b> <br>
+    <input type="text" name="OwnerId" placeholder="Enter OwnerId" formControlName="OwnerId">
+    <br>
+
+    <b>Creator ID</b> <br>
+    <input type="text" name="CreatorId" placeholder="Enter CreatorId" formControlName="CreatorId">
+    <br>
+    <b>Task Name</b> <br>
+    <input type="text" name="TaskName" placeholder="Enter Task Name" formControlName="TaskName">
+    <br>
+    <b>Description</b> <br>
+    <input type="text" name="Description" placeholder="Enter Description" formControlName="Description">
+    <br>
+    
+    <b>Select Status</b><br>
+    <select name="Satus" formControlName = "Status">
+        <option value="Not Started">Not Started</option>
+        <option value="On Going">On Going</option>
+        <option value="Completed">Completed</option>
+    </select>
+    
+    <br>
+    <b>Select Priority</b><br>
+    <select name="Priority" formControlName = "Priority">
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+        <option value="Very High">Very High</option>
+    </select>
+    <br>
+    <b>Notes</b> <br>
+    <input type="text" name="Notes" placeholder="Enter Notes if any!" formControlName="Notes">
+    <br>
+
+    <b>Is Bookmarked</b><br>
+    <select name="IsBookmarked" formControlName = "IsBookmarked">
+        <option value="True">True</option>
+        <option value="False">False</option>
+    </select>
+    <br>
+    <b>Created On</b> <br>
+    <input type="date" name="CreatedOn" placeholder="Enter CreatedOn Date" formControlName="CreatedOn">
+    <br>
+    <b>Status Changed On</b> <br>
+    <input type="date" name="StatusChangedOn" placeholder="Enter StatusChangedOn Date" formControlName="StatusChangedOn">
+    <br>
+	
+    <br>
+    <input type="submit" value="Submit" [disabled]="!form.valid"><br>
+    <!--<p>{{this.msg}}</p>
+    -->
+    
+</form>

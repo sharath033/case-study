@@ -1,0 +1,24 @@
+<hr>
+<h1>
+    Assign task to user below
+    </h1>
+    <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+        Task ID :
+        <input type="number" name="taskID" formControlName="taskID"/>
+        <br/>
+        <br/>
+        User ID :
+        <input type="number" name="userID" formControlName="userID"/>
+        <br/>
+        
+        <br/>
+        <br/>
+    
+        <button type = "button" class= "btn btn-success"(click)="onSubmit(form.value)">Assign</button>    
+        <div *ngFor= "let a of tasks">
+    
+            <h3> User ID : {{a.taskID}}</h3>
+            
+            </div>
+    </form>
+    

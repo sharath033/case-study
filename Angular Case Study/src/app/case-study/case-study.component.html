@@ -1,0 +1,34 @@
+<hr>
+
+<div>
+    <h2>Task Details</h2>
+    <div *ngFor="let task of tasks">
+    <table>
+        <tr>
+        <th>TASK ID</th>
+        
+        <td>{{task.taskID}}</td>
+        </tr>
+        <tr>
+        <th>OWNER ID</th>
+        
+        <td>{{task.ownerID}}</td>
+        </tr>
+        <tr>
+        <th>CREATOR ID</th>
+        
+        <td>{{task.creatorID}}</td>
+        </tr>
+        <tr>
+        <th>TaskName</th><td>{{task.name}}</td></tr>
+       <tr> <th>DESCRIPTION</th><td>{{task.description}}</td></tr>
+        <tr><th>STATUS</th><td>{{task.status}}</td></tr>
+        <tr><th>PRIORITY</th><td>{{task.priority}}</td></tr>
+        <tr><th>NOTES</th><td>{{task.notes}}</td></tr>
+        <tr><th>ISBOOKMARKED</th><td>{{task.isBookmarked}}</td></tr>
+        <tr><th>CREATED ON</th><td>{{task.createdOn}}</td></tr>
+        <tr><th>STATUS CHANGED ON </th><td>{{task.statusChangedOn}}</td></tr>
+    </table>
+    <hr>
+    </div>
+</div>

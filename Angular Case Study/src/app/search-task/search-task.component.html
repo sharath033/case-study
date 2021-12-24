@@ -1,0 +1,31 @@
+<hr>
+<h2>Search Task by TaskID</h2>
+<form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+
+   Task ID:
+    
+    <input type="number" name="taskID" formControlName="taskID"/>
+    
+    <br/>
+    
+    <button type = "button" class= "btn btn-success"
+    
+    (click)="onSubmit(form.value)">Search</button>
+    <div>
+        <h2>Task details</h2>
+        <div *ngFor="let t of task2">
+            <h2>{{t.taskID}}</h2>
+            <h2>{{t.ownerID}}</h2>
+            <h2>{{t.creatorID}}</h2>
+            <h2>{{t.name}}</h2>
+            <h2>{{t.description}}</h2>
+            <h2>{{t.status}}</h2>
+            <h2>{{t.priority}}</h2>
+            <h2>{{t.notes}}</h2>
+            <h2>{{t.isBookmarked}}</h2>
+            <h2>{{t.createdOn}}</h2>
+            <h2>{{t.statusChangedOn}}</h2>
+
+        </div>
+    </div>
+    </form>

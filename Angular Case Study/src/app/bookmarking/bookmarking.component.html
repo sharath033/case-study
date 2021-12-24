@@ -1,0 +1,28 @@
+
+<hr>
+<h1>
+    Bookmark task 
+    </h1>
+    <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+        Task ID :
+        <input type="number" name="taskID" formControlName="taskID"/>
+        <br/>
+        <br/>
+        Bookmark  :
+        <select name="isBookmarked" formControlName = "isBookmarked">
+            <option value="True">True</option>
+            <option value="False">False</option>
+        </select>
+        <br/>
+        
+        <br/>
+        <br/>
+    
+        <button type = "button" class= "btn btn-success"(click)="onSubmit(form.value)">ADD</button>    
+        <div *ngFor= "let a of tasks">
+    
+            <h3> User ID : {{a.taskID}}</h3>
+            
+            </div>
+    </form>
+    

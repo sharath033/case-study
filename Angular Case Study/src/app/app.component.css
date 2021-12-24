@@ -1,0 +1,14 @@
+nav a.active {
+    color:#039be5;
+}
+
+h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(24, 13, 177);
+    padding: 50%,50%,50%,50%;
+}
+
+div {
+    background-image: url("src\assets\image3.jpg");
+    background-color: teal;
+}

@@ -1,0 +1,13 @@
+<h3 style="text-align: center;">Delete Task by entering id</h3>
+<div class="login-wrapper" >
+    <div class="card">
+      <div class="card-body">
+        <form class="form-signin" [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+          
+          <input type="number" class="form-control" name="taskID" placeholder="Task ID" formControlName="taskID" required autofocus>
+
+          <button class="btn btn-lg btn-primary btn-block" type="submit" [disabled]="!form.valid" (click)="onSubmit(form.value)">Delete Task</button>
+        </form>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,36 @@
+
+<hr>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit(form.value)" style="text-align: center;">
+<p>
+User Name :
+</p>
+<input type="text" name="username" formControlName="username"/>
+
+<br>
+<br>
+<p>
+Password :
+</p>
+<input type="text" name="pwd" formControlName="pwd"/>
+
+<br>
+<br>
+
+<button type = "button" class= "btn btn-success"
+
+(click)="onSubmit(form.value)" (click)="home()" style="border-inline-end-color: rgb(4, 102, 28);">Login</button>
+<div>
+<!--<h2>User details</h2>
+-->
+<div *ngFor= "let a of users">
+    
+<h3> User ID : {{a.userID}}</h3>
+<h2> UserName : {{a.userName}} </h2>
+</div>
+
+</div>
+<br>
+<br>
+<hr>
+</form>

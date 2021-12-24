@@ -1,0 +1,27 @@
+<hr>
+<h1>
+Update the priority Below
+</h1>
+<form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+    <p>
+        Task ID :
+    </p>
+    <input type="number" name="taskID" formControlName="taskID"/>
+    <br/>
+    <br/>
+    <p>
+
+    Priority:
+    </p>
+    <select name="priority" formControlName="priority">
+        <option value="High">High</option>
+        <option value="Medium">Medium</option>
+        <option value="Low">Low</option>
+    </select>
+    
+    <br/>
+    <br/>
+
+    <button type = "button" class= "btn btn-success"(click)="onSubmit(form.value)">Update</button>   
+    
+</form>

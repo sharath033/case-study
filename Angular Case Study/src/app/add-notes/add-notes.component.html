@@ -1,0 +1,30 @@
+<hr>
+<h1>
+    Add Notes below
+    </h1>
+    <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+        <p>
+        Task ID :
+    </p>
+        <input type="number" name="taskID" formControlName="taskID"/>
+        <br/>
+        <br/>
+        <p>
+        Notes :
+    </p>
+        <input type="text" name="notes" formControlName="notes"/>
+        <br/>
+        
+        <br/>
+        <br/>
+    
+        <button type = "button" class= "btn btn-success"(click)="onSubmit(form.value)">ADD</button>    
+        <div *ngFor= "let a of tasks">
+    
+            <h3> User ID : {{a.taskID}}</h3>
+            
+            </div>
+            
+
+    </form>
+    
